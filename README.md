@@ -16,3 +16,7 @@ The thumb height must be calculated based on the original video resolution.
 ## Links
 
 https://releases.ubuntu.com/22.04.3/ubuntu-22.04.3-live-server-amd64.iso
+
+## Other stuff
+
+Thumbs Grid Video Maker
