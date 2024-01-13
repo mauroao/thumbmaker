@@ -13,3 +13,6 @@ The program must have a function create_thumbs that receive theese parameters:
 The main function must call create_thumbs function with default parameters.
 The thumb height must be calculated based on the original video resolution.
  
+## Links
+
+https://releases.ubuntu.com/22.04.3/ubuntu-22.04.3-live-server-amd64.iso
