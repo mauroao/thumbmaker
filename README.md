@@ -15,4 +15,8 @@ The thumb height must be calculated based on the original video resolution.
  
 ## Links
 
-https://releases.ubuntu.com/22.04.3/ubuntu-22.04.3-live-server-amd64.iso
+https://devicetests.com/extract-frames-fps-scaling-ffmpeg
+
+## Tests
+
+ffmpeg -i in.mp4 -vf "fps=0.03,scale=400:-1" frames/%04d.jpeg
