@@ -1,4 +1,4 @@
-# thumbmaker
+# Thumbsmaker
 
 ## Prompt
 
@@ -19,7 +19,11 @@ https://devicetests.com/extract-frames-fps-scaling-ffmpeg
 
 ## Tests
 
-ffmpeg -i in.mp4 -vf "fps=0.0167,scale=400:-1" frames/%04d.jpeg
+```
+ffmpeg -i in.mp4 -vf "fps=(1/30),scale=400:-1" frames/%04d.jpeg
+```
+- "1/30" means that I want one screenshot at every 30 seconds. 
+- "400:-1" means that I want 400 width, and height must be calculatet in the way that output maintain original proportion.
 
 ## Other stuff
 
