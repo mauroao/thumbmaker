@@ -19,7 +19,7 @@ https://devicetests.com/extract-frames-fps-scaling-ffmpeg
 
 ## Tests
 
-ffmpeg -i in.mp4 -vf "fps=0.03,scale=400:-1" frames/%04d.jpeg
+ffmpeg -i in.mp4 -vf "fps=0.0167,scale=400:-1" frames/%04d.jpeg
 
 ## Other stuff
 
