@@ -1,30 +1,37 @@
 # Thumbsmaker
-
-## Prompt
-
-Create a program using Go.
-This program will use ffmpeg to create a thumbnail image grid of a video file.
-The program must have a function create_thumbs that receive theese parameters:
-- input_file: path to the video file, default is input.mp4;
-- output_file: path to image to be created, default is out.png, or out.jpg (you are free to choose the best image extension);
-- columns: a number of columns, default is 4;
-- thumb_width: the width in pixels of every thumb image in the grid, default is 300; 
-- interval: a number of seconds between every video screen capture, default is 30 seconds;
-The main function must call create_thumbs function with default parameters.
-The thumb height must be calculated based on the original video resolution.
  
 ## Links
 
 https://devicetests.com/extract-frames-fps-scaling-ffmpeg
 
+## Ideas
+
+Suggestion name for program: "Thumbs Grid Video Maker" 
+
+## Requirements
+
+- Each cell in the sheet MUST be at least 300px wide;
+- We suggest 3x9 (27 pics) or 2x10 (20 pics) and 900-1200px wide; 
+
+## More stuff 
+
+- qtd pictures (pics): 27 
+- video duration (duration): 948 
+
+> Time interval = duration / pics
+
+Time interval = 948 / 27 = 35.11
+
 ## Tests
 
 ```
-ffmpeg -i in.mp4 -vf "fps=(1/30),scale=400:-1" frames/%04d.jpeg
+ffmpeg -i in.mp4 -vf "fps=(1/35.11),scale=400:-1" frames/%04d.jpeg
 ```
-- "1/30" means that I want one screenshot at every 30 seconds. 
-- "400:-1" means that I want 400 width, and height must be calculatet in the way that output maintain original proportion.
+- "1/35.11" means that I want one screenshot at every 35.11 seconds. 
+- "400:-1" means that I want 400 width, and height must be calculatet in the way that output maintain original scale.
 
-## Other stuff
+## Get video duration
 
-Thumbs Grid Video Maker
+```
+ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 your_video_file.mp4
+```
